@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="starry-bg">
+
+    <nav>
+        <a href="#objective">Objective</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#declaration">Declaration</a>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <img src="images/profile.jpg" class="profile-img" alt="Profile Image">
+            <div class="header-text">
+                <h1>Meena Rishitha Penumaka</h1>
+                <p>Web Developer</p>
+                <p>📞 7569887705</p>
+                <p>✉️ rishithapenumaka2418@gmail.com</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/meena-rishitha-07a57328a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/MeenaRishitha/DevOps" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <a href="images/Rishitha Resume.png" download class="download-btn">Download Resume</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="objective" class="content-section bg-effect">
+        <h2>Objective</h2>
+        <p>Seeking a challenging engineering role where I can apply my technical skills and innovative mindset to contribute effectively to projects while continuously learning and growing within a dynamic team environment.</p>
+    </section>
+
+    <section id="skills" class="content-section bg-effect">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
+            <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+            <div class="skill-item"><i class="fab fa-js-square"></i><p>JavaScript</p></div>
+            <div class="skill-item"><i class="fab fa-react"></i><p>React.js</p></div>
+            <div class="skill-item"><i class="fab fa-node"></i><p>Node.js</p></div>
+        </div>
+    </section>
+
+    <section id="education" class="content-section bg-effect">
+        <h2>Education</h2>
+        <p><strong>B.Tech (CSE)</strong> - Sasi Institute of Technology (2022-2026) - 7.91 CGPA</p>
+        <p><strong>Intermediate</strong> - Annapurneshwari VOC Junior College (2021-2022)</p>
+        <p><strong>High School</strong> - Sri Ravindra Bharathi Vidyalaya (2020) - 9.3</p>
+    </section>
+
+    <section id="certifications" class="content-section bg-effect">
+        <h2>Certifications</h2>
+        <div class="certificates-container">
+            <div class="certificate-card">
+                <img src="images/certificate1.jpg" alt="Certificate 1">
+                <p class="certificate-description">Android Developer Virtual Internship (AICTE)</p>
+            </div>
+            <div class="certificate-card">
+                <img src="images/certificate2.jpg" alt="Certificate 2">
+                <p class="certificate-description">AI-ML Virtual Internship (AICTE)</p>
+            </div>
+            <div class="certificate-card">
+                <img src="images/certificate3.png" alt="Certificate 3">
+                <p class="certificate-description">Machine Learning</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="declaration" class="content-section bg-effect">
+        <h2>Declaration</h2>
+        <p>I hereby declare that all the statements mentioned in the above resume are true, correct, and complete to the best of my knowledge and belief.</p>
+    </section>
+
+    <div class="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Meena Rishitha Penumaka. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".content-section");
+            const body = document.querySelector("body");
+
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement("div");
+                star.classList.add("floating-star");
+                star.style.left = Math.random() * 100 + "vw";
+                star.style.top = Math.random() * 100 + "vh";
+                body.appendChild(star);
+            }
+
+            const triggerAnimation = () => {
+                sections.forEach((section) => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    if (sectionTop < windowHeight - 100) {
+                        section.classList.add("visible");
+                    }
+                });
+            };
+
+            window.addEventListener("scroll", triggerAnimation);
+            triggerAnimation();
+        });
+    </script>
+</body>
+</html>
+
+
+
